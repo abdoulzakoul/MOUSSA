@@ -15,6 +15,7 @@
   "build": {
     "appId": "com.zaktech.erp",
     "productName": "ZAKTECH ERP",
+    "asar": false,
     "files": [
       "main.js",
       "app/**/*"
