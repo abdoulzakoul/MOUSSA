@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, globalShortcut } = require('electron');
 const path = require('path');
 
 function createWindow() {
@@ -14,13 +14,18 @@ function createWindow() {
     }
   });
 
-  Menu.setApplicationMenu(null); // Cache la barre de menu (Fichier, Edition...) pour un rendu plus "application"
+  Menu.setApplicationMenu(null);
 
   win.loadFile(path.join(__dirname, 'app', 'zaktech-erp.html'));
+  win.webContents.openDevTools(); // TEMPORAIRE : pour voir l'erreur exacte
 }
 
 app.whenReady().then(() => {
   createWindow();
+  globalShortcut.register('F12', () => {
+    const win = BrowserWindow.getFocusedWindow();
+    if (win) win.webContents.toggleDevTools();
+  });
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
