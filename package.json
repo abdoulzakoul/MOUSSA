@@ -1,0 +1,32 @@
+{
+  "name": "zaktech-erp",
+  "version": "1.0.0",
+  "description": "ZAKTECH ERP - Logiciel de gestion",
+  "main": "main.js",
+  "author": "ZAKTECH",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.zaktech.erp",
+    "productName": "ZAKTECH ERP",
+    "files": [
+      "main.js",
+      "app/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

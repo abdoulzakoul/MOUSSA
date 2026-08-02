@@ -1,0 +1,56 @@
+===========================================
+ ZAKTECH ERP — Créer le fichier .exe
+===========================================
+
+Ce dossier contient tout ce qu'il faut pour transformer ZAKTECH ERP
+en véritable application de bureau (.exe sur Windows, .dmg sur Mac,
+.AppImage sur Linux).
+
+⚠️ IMPORTANT : cette compilation doit se faire sur VOTRE ordinateur
+(avec accès internet), car elle télécharge le moteur Electron
+(~150 Mo). Cela ne peut pas être fait ici.
+
+--------------------------------------------
+ÉTAPES (une seule fois) :
+--------------------------------------------
+
+1. Installer Node.js (gratuit) :
+   https://nodejs.org  → téléchargez la version "LTS" et installez-la.
+
+2. Ouvrez ce dossier "ZakTechERP-Desktop" dans un terminal :
+   - Windows : clic droit dans le dossier → "Ouvrir dans le terminal"
+     (ou PowerShell)
+   - Mac/Linux : ouvrez Terminal et faites "cd" vers ce dossier
+
+3. Installez les dépendances (une seule fois) :
+      npm install
+
+4. Testez l'application (optionnel, avant de compiler) :
+      npm start
+
+5. Compilez le vrai fichier exécutable :
+      npm run dist
+
+6. Le résultat apparaît dans le dossier "dist" :
+   - Windows → ZAKTECH ERP Setup 1.0.0.exe (installeur classique)
+   - Mac     → ZAKTECH ERP-1.0.0.dmg
+   - Linux   → ZAKTECH ERP-1.0.0.AppImage
+
+Vous pouvez ensuite distribuer ce fichier .exe à vos clients ou
+l'installer sur d'autres ordinateurs Windows sans rien installer
+d'autre.
+
+--------------------------------------------
+NOTE SUR LES DONNÉES :
+--------------------------------------------
+L'application garde vos données dans le stockage local de la fenêtre
+(comme un navigateur). Elles restent sur l'ordinateur où l'app est
+utilisée. Pensez à faire des exports Excel réguliers depuis
+Paramètres si vous changez d'ordinateur.
+
+--------------------------------------------
+BESOIN D'UNE ICÔNE PERSONNALISÉE ?
+--------------------------------------------
+Ajoutez un fichier "icon.ico" (Windows) ou "icon.icns" (Mac) dans ce
+dossier, puis ajoutez dans package.json, sous "win": { "icon": "icon.ico" }
+et sous "mac": { "icon": "icon.icns" }.

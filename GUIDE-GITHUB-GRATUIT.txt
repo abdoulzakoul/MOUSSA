@@ -1,0 +1,74 @@
+========================================================
+ ZAKTECH ERP — Obtenir le .exe via GitHub (GRATUIT)
+========================================================
+
+GitHub Actions est un service GRATUIT qui va compiler votre .exe
+sur ses propres serveurs. Vous n'installez RIEN sur votre PC.
+Tout se fait dans le navigateur, en 10 minutes.
+
+--------------------------------------------------------
+ÉTAPE 1 — Créer un compte GitHub (gratuit)
+--------------------------------------------------------
+Allez sur https://github.com/signup et créez un compte
+(email + mot de passe). C'est gratuit, aucune carte bancaire.
+
+--------------------------------------------------------
+ÉTAPE 2 — Créer un nouveau dépôt (repository)
+--------------------------------------------------------
+1. Une fois connecté, cliquez sur le "+" en haut à droite
+   → "New repository"
+2. Nom du dépôt : zaktech-erp
+3. Laissez-le en "Public" (le plus simple) ou "Private" si
+   vous préférez qu'il reste privé (fonctionne aussi, gratuit).
+4. Cliquez sur "Create repository"
+
+--------------------------------------------------------
+ÉTAPE 3 — Envoyer les fichiers de ce dossier sur GitHub
+--------------------------------------------------------
+1. Sur la page de votre nouveau dépôt, cliquez sur
+   "uploading an existing file" (ou "Add file" → "Upload files")
+2. Glissez-déposez TOUT le contenu de ce dossier
+   "ZakTechERP-Desktop" (main.js, package.json, le dossier "app",
+   le dossier ".github" avec le fichier build.yml à l'intérieur)
+
+   ⚠️ IMPORTANT : le dossier ".github/workflows/build.yml" doit
+   être conservé tel quel (avec ses sous-dossiers). Si le
+   glisser-déposer ne garde pas la structure de dossiers,
+   uploadez-les un par un en recréant les dossiers avec le
+   bouton "Add file" → "Create new file" et en tapant le chemin
+   complet, ex : .github/workflows/build.yml
+
+3. En bas de page, cliquez sur "Commit changes"
+
+--------------------------------------------------------
+ÉTAPE 4 — Lancer la compilation
+--------------------------------------------------------
+1. Allez dans l'onglet "Actions" en haut du dépôt
+2. Vous verrez "Build ZAKTECH ERP (.exe)" en cours d'exécution
+   (déclenché automatiquement après votre envoi de fichiers)
+   Si rien ne se lance : cliquez sur le workflow dans la liste
+   à gauche, puis "Run workflow" → "Run workflow"
+3. Attendez 2 à 5 minutes (un rond jaune tourne, puis devient
+   une coche verte ✅ quand c'est terminé)
+
+--------------------------------------------------------
+ÉTAPE 5 — Télécharger votre .exe
+--------------------------------------------------------
+1. Cliquez sur le run terminé (coche verte ✅)
+2. Tout en bas de la page, section "Artifacts"
+3. Cliquez sur "ZAKTECH-ERP-Windows" pour télécharger un .zip
+4. Dézippez-le : vous trouverez le fichier
+   "ZAKTECH ERP Setup 1.0.0.exe"
+5. C'est votre installeur ! Envoyez-le à qui vous voulez,
+   il s'installera comme n'importe quel logiciel Windows.
+
+--------------------------------------------------------
+NOTES
+--------------------------------------------------------
+- Chaque fois que vous modifiez l'app et renvoyez les fichiers
+  sur GitHub, un nouveau .exe sera généré automatiquement.
+- Windows peut afficher un avertissement "Éditeur inconnu" au
+  premier lancement du .exe (normal pour un logiciel non signé
+  numériquement) : cliquez sur "Informations complémentaires"
+  puis "Exécuter quand même".
+- Ce service est entièrement gratuit pour ce type d'usage.
